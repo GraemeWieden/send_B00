@@ -30,13 +30,12 @@ void loop()
   testA++;
   testB += 2;
   
-  delay(2000);
   // blink led
   digitalWrite(ledPort, HIGH);
   delay(50);   
   digitalWrite(ledPort, LOW);
-  // wait a bit longer before next transmission
-  delay(2000);
+  // wait for 5 seconds before next transmission
+  delay(5000);
 }
 
 void sendB00Packet(int content, int house, int channel, int valueA, int valueB)
