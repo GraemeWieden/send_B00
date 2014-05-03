@@ -6,12 +6,13 @@ Testing and evaluation sketch for Arduino
 
 We have defined our own protocol for sending sensor data via RF between Arduinos. The protocol is called B00 as it says Boo! to announce itself.
 
-The packet is a total of 48 bits made up of:
+The packet is a total of 49 bits made up of:
 
 - 12 bits: B00 to announce and content descriptor
 - 4 bits: 2 bit house code 2 bit channel code
 - 16 bits: integer value 1
 - 16 bits: integer value 2
+- 1 bit: even parity
 
 Other content descriptors may be introduced in future to indicate other payload content within the packet. This can be handled by incrementing from B00 to B01 B02 etc. For the moment, we just have two 16 bit integers. That allows from 0 to 65535.
 
