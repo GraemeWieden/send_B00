@@ -16,26 +16,33 @@ The packet is a total of 50 bits made up of:
 Content Descriptor
 ------------------
 The content descriptor currently defines these content types:
-B00: 
-  32 bits: double precision floating point value
-B01: 
-  32 bits: signed long integer value
-B02: 
-  32 bits: unsigned long integer value
-B03: 
-  16 bits: signed integer value 1
-  16 bits: signed integer value 2
-B04: 
-  16 bits: unsigned integer value 1
-  16 bits: unsigned integer value 2
-B05: 
-  8 bits: byte value 1
-  8 bits: byte value 2
-  8 bits: byte value 3
-  8 bits: byte value 4
+###B00:
+- 32 bits: double precision floating point value
+
+###B01: 
+- 32 bits: signed long integer value
+
+###B02: 
+- 32 bits: unsigned long integer value
+
+###B03: 
+- 16 bits: signed integer value 1
+- 16 bits: signed integer value 2
+
+###B04: 
+- 16 bits: unsigned integer value 1
+- 16 bits: unsigned integer value 2
+
+###B05: 
+- 8 bits: byte value 1
+- 8 bits: byte value 2
+- 8 bits: byte value 3
+- 8 bits: byte value 4
   
 
-The RF encoding scheme used by the B00 protocol is a reasonably 'standard' typpe where zero is represented as short high - long low and one is represented as long high - short low. 
+Encoding
+--------
+The RF encoding scheme used by the B00 protocol is a reasonably 'standard' type where zero is represented as short high - long low and one is represented as long high - short low. 
 
 The short pulse is one quarter of the bit duration and the long pulse is three quarters. The actual pulse durations are derived from the trigger pulse length which is 10 milliseconds. The short pulse is 1/31 of the trigger pulse.
 
